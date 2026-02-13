@@ -4,6 +4,9 @@ project(ViewCode)
 set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(ViewCode main.cpp
-        types.h
-        blocks.h)
+add_executable(ViewCode src/main.cpp
+        src/compile.cpp
+        src/types.cpp
+        src/types.h
+        src/blocks.h
+        src/compile.h)

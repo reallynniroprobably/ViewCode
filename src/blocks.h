@@ -37,7 +37,7 @@ public:
 
 class IfNotDefined : public Block {
 public:
-    explicit IfNotDefined(/* implement header define enum */ auto define)
+    explicit IfNotDefined(std::string define)
     : Block(
         "ifnotdefined",
         ENCLOSED,
@@ -47,31 +47,27 @@ public:
                 "define",
                 typeid(define)
             }})
-    {
-        throw std::logic_error("TODO: implement header define enum in file class");
-    }
+    {}
 };
 
 class IfDefined : public Block {
 public:
-    explicit IfDefined(/* implement header define enum */ auto define)
+    explicit IfDefined(std::string define)
     : Block(
         "ifdefined",
         ENCLOSED,
-        {"#ifdef " + std::move(define), "endif"},
+        {"#ifdef " + std::move(define), "#endif"},
         {
             {
                 "define",
                 typeid(define)
             }})
-    {
-        throw std::logic_error("TODO: implement header define enum in file class");
-    }
+    {}
 };
 
 class Define : public Block {
 public:
-    explicit Define(/* implement header define enum */ auto define)
+    explicit Define(std::string  define)
     : Block(
         "define",
         HEADER,
@@ -81,9 +77,7 @@ public:
                 "define",
                 typeid(define)
             }})
-    {
-        throw std::logic_error("TODO: implement header define enum in file class");
-    }
+    {}
 };
 
 class Loop : public Block {
