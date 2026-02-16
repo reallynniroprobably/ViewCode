@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(ViewCode src/main.cpp
-        src/compile.cpp
-        src/types.cpp
-        src/types.h
+        src/compile/compile.cpp
+        src/types/types.cpp
+        src/types/types.h
         src/blocks.h
-        src/compile.h)
+        src/compile/compile.h)

@@ -2,7 +2,7 @@
 #define VIEWCODE_BLOCKS
 
 #include <stdexcept>
-#include "types.h"
+#include "types/types.h"
 #include <typeinfo>
 
 class Print : public Block {
