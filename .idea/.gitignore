@@ -13,4 +13,3 @@
 /.clangd
 # ignore all build files
 /build/
-#ignore all .idea files
