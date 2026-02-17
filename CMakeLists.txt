@@ -8,5 +8,6 @@ add_executable(ViewCode src/main.cpp
         src/compile/compile.cpp
         src/types/types.cpp
         src/types/types.h
-        src/blocks.h
+        src/blocks/blocks.cpp
+        src/blocks/blocks.h
         src/compile/compile.h)

@@ -2,7 +2,7 @@
 #define VIEWCODE_BLOCKS
 
 #include <stdexcept>
-#include "types/types.h"
+#include "../types/types.h"
 #include <string>
 #include <typeinfo>
 
@@ -20,32 +20,12 @@
  */
 class Print : public Block {
 public:
-    explicit Print(std::string output)
-    : Block(
-        "print",
-        NORMAL,
-        {"std::cout << " + std::move(output)},
-        {
-            {
-                "output",
-                typeid(output)
-            }})
-    {}
+    explicit Print(std::string output);
 };
 
 class Include : public Block {
 public:
-    explicit Include(std::string file)
-    : Block(
-        "include",
-        HEADER,
-        {"#include " + std::move(file)},
-        {
-            {
-                "file",
-                typeid(file)
-            }})
-    {}
+    explicit Include(std::string file);
 };
 
 class IfNotDefined : public Block {
