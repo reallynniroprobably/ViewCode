@@ -12,4 +12,4 @@
 # Ignore all .clangd files
 /.clangd
 # ignore all build files
-/build/
+/build/**
